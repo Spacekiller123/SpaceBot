@@ -231,27 +231,27 @@
         return str;
     };
 
-    var botCreator = "Yemasthui";
-    var botMaintainer = "Benzi"
-    var botCreatorIDs = ["3851534", "4105209"];
+    var botCreator = "Spacekiller";
+    var botMaintainer = [];
+    var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.8.17",
+        version: "2.0.0",
         status: false,
-        name: "basicBot",
+        name: "SpaceBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
+        scriptLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/SpaceBot.js",
+        cmdLink: "https://github.com/Spacekiller123/SpaceBot/blob/master/commands.md",
+        chatLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "SpaceBot",
             language: "english",
-            chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
-            scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
+            chatLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/lang/en.json",
+            scriptLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/SpaceBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -294,7 +294,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
-            motd: "Temporary Message of the Day",
+            motd: "",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -309,9 +309,9 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json",
-                OP: "https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json",
-                BANNED: "https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json"
+                NSFW: null,
+                OP: null,
+                BANNED: null
             }
         },
         room: {
