@@ -57,7 +57,6 @@
             $.getScript('https://cdn.jsdelivr.net/sockjs/1.0.3/sockjs.min.js', loadSocket);
         } else loadSocket();
     }
-
     var sendToSocket = function () {
         var basicBotSettings = basicBot.settings;
         var basicBotRoom = basicBot.room;
@@ -231,27 +230,27 @@
         return str;
     };
 
-    var botCreator = "Spacekiller";
-    var botMaintainer = ""
-    var botCreatorIDs = [];
+    var botCreator = "Yemasthui";
+    var botMaintainer = "Benzi"
+    var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.0.0",
+        version: "2.8.17",
         status: false,
-        name: "SpaceBot",
+        name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/SpaceBot.js",
-        cmdLink: "https://github.com/Spacekiller123/SpaceBot/blob/master/commands.md",
-        chatLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/lang/en.json",
+        scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
+        cmdLink: "http://git.io/245Ppg",
+        chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "SpaceBot",
+            botName: "basicBot",
             language: "english",
-            chatLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/lang/en.json",
-            scriptLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/SpaceBot.js"",
+            chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
+            scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -294,7 +293,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
-            motd: "",
+            motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -306,12 +305,12 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: false,
+            songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: null,
-                OP: null,
-                BANNED: null
+                NSFW: "https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json",
+                OP: "https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json",
+                BANNED: "https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json"
             }
         },
         room: {
@@ -1498,7 +1497,6 @@
                                 if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                 if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
                                 else{
-
                                 }
                         }
                 },
@@ -2032,9 +2030,7 @@
             },
 
             /*
-
             // This does not work anymore.
-
             deletechatCommand: {
                 command: 'deletechat',
                 rank: 'mod',
@@ -2055,18 +2051,15 @@
                         for (var i = 0; i < chats.length; i++) {
                             var n = from[i].textContent;
                             if (name.trim() === n.trim()) {
-
                                 // var messagecid = $(message)[i].getAttribute('data-cid');
                                 // var emotecid = $(emote)[i].getAttribute('data-cid');
                                 // API.moderateDeleteChat(messagecid);
-
                                 // try {
                                 //     API.moderateDeleteChat(messagecid);
                                 // }
                                 // finally {
                                 //     API.moderateDeleteChat(emotecid);
                                 // }
-
                                 if (typeof $(message)[i].getAttribute('data-cid') == "undefined"){
                                     API.moderateDeleteChat($(emote)[i].getAttribute('data-cid')); // works well with normal messages but not with emotes due to emotes and messages are seperate.
                                 } else {
@@ -2078,7 +2071,6 @@
                     }
                 }
             },
-
             */
 
             deletechatCommand: {
