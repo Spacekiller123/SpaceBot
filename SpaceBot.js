@@ -232,7 +232,7 @@
     };
 
     var botCreator = "Spacekiller";
-    var botMaintainer = [];
+    var botMaintainer = ""
     var botCreatorIDs = [];
 
     var basicBot = {
@@ -251,7 +251,7 @@
             botName: "SpaceBot",
             language: "english",
             chatLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/lang/en.json",
-            scriptLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/SpaceBot.js",
+            scriptLink: "https://rawgit.com/Spacekiller123/SpaceBot/master/SpaceBot.js"",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -306,7 +306,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
                 NSFW: null,
